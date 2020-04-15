@@ -3,7 +3,7 @@
 1) Generate APP Id and APP Secret Using 
     URL:- {SitecollectionURL}/_layouts/appregnew.aspx
     ![Appregnew](/imagesForREADME/Appregnew.PNG)
-    Provide access:- <SitecollectionURL>/_layouts/appinv.aspx
+    Provide access:- {SitecollectionURL}/_layouts/appinv.aspx
     ![Appinv](/imagesForREADME/Appinv.PNG)
 
  2) Create an Power Automate Flow zip file is attached with the project in the folder
