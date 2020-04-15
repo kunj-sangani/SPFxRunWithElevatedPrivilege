@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfxwithelevateaccess-client-side-solution",
+    "id": "5c2c9c8d-f2dc-45fe-a257-7dda5f5f5b99",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/spfxwithelevateaccess.sppkg"
+  }
+}
