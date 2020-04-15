@@ -1,53 +1,21 @@
 # spfxwithelevateaccess
 
-This project uses [React](https://reactjs.org).
+1) Generate APP Id and APP Secret Using 
+    URL:- <SitecollectionURL>/_layouts/appregnew.aspx
+    [](/imagesForREADME/Appregnew.PNG)
+    Provide access:- <SitecollectionURL>/_layouts/appinv.aspx
+    [](/imagesForREADME/Appinv.PNG)
 
-> This is where you include your project's documentation.
+ 2) Create an Power Automate Flow zip file is attached with the project in the folder
+    [Link to Flow](/MSFlow/FetchTokenClientID_20200415051908.zip)
 
-## Global dependencies
+    [](/imagesForREADME/Flow.PNG)
+    
+    Body of the Flow should be in the below format
 
-Requires Gulp globally installed:
+    Body:- grant_type=client_credentials&client_id=<clientId>@<tenantId>&client_secret=<clientSecret>&resource=00000003-0000-0ff1-ce00-000000000000/<SharePoint site Domain>@<tenantId>
 
-```shell
-npm install --global gulp
-```
+ 3) Use the Bearer token obtained from the Power Automate to fetch the data from SharePoint
 
-## Building the code
 
-Download & install all dependencies, build, bundle & package the project
 
-```shell
-# download & install dependencies
-npm install
-
-# transpile all TypeScript & SCSS => JavaScript & CSS
-gulp build
-
-# create component bundle & manifest
-gulp bundle
-
-# create SharePoint package
-gulp package-solution
-```
-
-These commands produce the following:
-
-- **./lib**: intermediate-stage commonjs build artifacts
-- **./dist**: bundled script, along with other resources
-- **./temp/deploy**: all resources required by component(s) to deploy to a CDN (when `--ship` argument present)
-
-## Build options
-
-- `gulp clean`: Deletes all build output (**/dist**, **/lib**, **/temp**, etc.).
-- `gulp build`: Transpiles all TypeScript & SCSS to JavaScript & CSS, generates source map files & TypeScript type declaration files
-- `gulp bundle [--ship|-p|--production]`: Runs gulp task **build**, then uses webpack to create the JavaScript bundle(s) and component manifest(s) as defined in **./config/config.json**. The `--ship`, `-p` or `--production` argument specifies a production build that will generate minified bundles.
-- `gulp serve [--ship|-p|--production]`: Runs gulp tasks **build**, **bundle** & starts the local webserver. Depending on the project type, it opens the browser and navigates to the local workbench or specified URL (in the case of extension components). The `--ship`, `-p` or `--production` argument specifies a production build that modifies the resulting package for production hosting rather than local hosting of assets.
-- `gulp package-solution`: Creates the SharePoint Package (**.sppkg**) file.
-- `gulp dist`: Creates a production-ready SharePoint Package (**.sppkg**) file. The following gulp task gets executed in this specific order `gulp clean`, `gulp bundle`, `gulp package-solution.`
-- `gulp dev`: Creates a development-ready SharePoint Package (**.sppkg**) file. The following gulp task will be executed in this specific order `gulp clean`, `gulp bundle`, `gulp package-solution.`
-
-> View all available gulp tasks by running `gulp --tasks`
-
-More information on [SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview)
-
-Generatored with [pnp/spfx](https://github.com/pnp/generator-spfx/).
