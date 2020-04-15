@@ -2,14 +2,14 @@
 
 1) Generate APP Id and APP Secret Using 
     URL:- <SitecollectionURL>/_layouts/appregnew.aspx
-    [Appregnew](/imagesForREADME/Appregnew.PNG)
+    ![Appregnew](/imagesForREADME/Appregnew.PNG)
     Provide access:- <SitecollectionURL>/_layouts/appinv.aspx
-    [Appinv](/imagesForREADME/Appinv.PNG)
+    ![Appinv](/imagesForREADME/Appinv.PNG)
 
  2) Create an Power Automate Flow zip file is attached with the project in the folder
-    [Link to Flow](/MSFlow/FetchTokenClientID_20200415051908.zip)
+    [Link to Flow](https://github.com/kunj-sangani/SPFxRunWithElevatedPrivilege/blob/master/MSFLOW/FetchTokenClientID_20200415051908.zip)
 
-    [Flow](/imagesForREADME/Flow.PNG)
+    ![Flow](/imagesForREADME/Flow.PNG)
     
     Body of the Flow should be in the below format
 
